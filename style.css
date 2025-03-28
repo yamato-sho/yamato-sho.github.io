@@ -1,0 +1,994 @@
+
+
+.zen-old-mincho-regular {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-old-mincho-semibold {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ゴシック */
+.zen-kaku-gothic-new-regular {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-kaku-gothic-new-medium {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1{
+  font-size: 56px;
+  white-space: nowrap;
+  margin-bottom: 4%;
+}
+
+h2{
+  font-size:32px;
+}
+h3{
+  font-size: 24px;
+}
+h4{
+  font-size:16px;
+}
+p{
+  font-size: 16px;
+  line-height: 150%;
+}
+
+h1,h2,h3,h4,p{
+  letter-spacing: 0.05em;
+}
+
+body {
+    font-family: "Zen Old Mincho", serif;
+    background-color: #f4f5f7;
+    color: #2c2c2c;
+  }
+  
+
+ 
+  /* メニュー */
+  .header__nav :hover{
+    color : #ffba43;
+  }
+  
+  a{
+    transition: color 0.3s;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: transparent;
+    background-color: #09213d9a ;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    z-index: 2000;
+  }
+  
+  .hamburger span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #F5F6F6;
+    border-radius: 2px;
+    transition: 0.3s ease;
+    margin: 4px 0;
+  }
+  
+  .hamburger span:nth-child(1) {
+    top: 17px;
+  }
+  
+  .hamburger span:nth-child(2) {
+    top: 25px;
+  }
+  
+  .hamburger span:nth-child(3) {
+    top: 33px;
+  }
+  
+  /* × */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 22px;
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 22px;
+  }
+  
+  
+  /* ナビメニュー（PC） */
+  .header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    background-color: rgba(1, 17, 42, 0.403);
+    backdrop-filter: blur(10px); /* ← 背景ぼかしで美しく */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(3, 23, 57, 0.336);
+    white-space: nowrap;
+  }
+  
+  .nav__items {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav__items li {
+    margin: 0 15px;
+  }
+  
+  .nav__items li a {
+    display: block;
+    padding: 15px 10px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav__items li a:hover {
+    color: none;
+  }
+  
+  /* 画面サイズ */
+
+
+@media screen and (max-width: 1100px){
+  .header__nav  ul li a {
+  font-size: 13px;
+  padding: 15px 0px;
+  }
+
+  .exp-card{
+    width: 30px;
+    height: 100px;
+  }
+
+
+}
+  
+
+  /* スマホ表示用 */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+
+    .header__nav  ul li a {
+      font-size: 16px;
+      padding: 15px 0px;
+      }
+  
+    .header__nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(1, 23, 51, 0.95);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+      z-index: 1500;
+      
+    }
+  
+    .header__nav.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .nav__items {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav__items li {
+      margin: 2px 0;
+    }
+  
+    .nav__items li a {
+      font-size: 16px;
+    }
+
+
+    .pickup-container{
+      display: contents;
+    }
+
+    .pickup-container{
+      flex-direction: column;
+    }
+
+    .exp-card{
+      width: 200px;
+      height: 300px;
+    }
+
+    .exp-card {
+      width: 100%; 
+      height: 100px; 
+    }
+  
+    .experience-section h2 {
+      font-size: 1.5rem; 
+    }
+  }
+
+
+  
+/* トップセクション仮デザイン */
+  .hero {
+    height: 600px;
+    background: linear-gradient(to bottom, #87ceeb, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    /* font-size: 3em; */
+  }
+  
+/* メインビジュアル */
+
+.main-visual {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.main-visual img {
+  width: 100%; height: 100%; object-fit: cover;
+  position: relative;
+}
+.slider{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+.slider div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 5;
+	opacity: 0;
+	animation-name: slide-fade;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes slide-fade {
+	0%{
+		opacity: 0;
+	}
+	40%{
+		opacity: 1;
+	}
+	80%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0;
+		z-index: 0;
+	}
+}
+
+.slider div:first-of-type{
+	background-image: url(../img/top_img.jpg);
+}
+.slider div:nth-of-type(2){
+	background-image: url(../img/top_img2.jpg);
+	animation-delay: 10s;
+}
+.slider div:last-of-type{
+	background-image: url(../img/top_img3.jpg);
+	animation-delay: 20s;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height:100%;
+  pointer-events: none;
+  background: linear-gradient(to top, #081a17, transparent);
+  z-index: 15;
+}
+
+.visual-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: #F5F6F6;
+  z-index:16;
+
+}
+
+
+
+
+
+/* 街の紹介 */
+.town-intro-section {
+    background: linear-gradient(#081a17,50%,#09213d); 
+    padding: 16% 8%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+  }
+  
+  .town-intro-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .town-intro-inner h2 {
+    color: #ECEDED;
+  }
+  
+  .town-intro-inner p {
+    color: #ECEDED;
+    margin: 10% 0%;
+  }
+  
+  
+
+/* 星空スライド*/
+.star-full-section {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .star-full-bg {
+    background: url('../img/img-intro.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .star-full-overlay {
+    background: rgba(0, 0, 0, 0.4); /* 少し透けた黒で可読性UP */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .star-full-content {
+    text-align: center;
+    color: #ECEDED;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .star-full-content h2 {
+    margin-bottom: 2%;
+  }
+  .star-full-content h4 {
+    margin-bottom: 8%;
+  }
+  
+  .star-full-content p {
+    margin-bottom: 8%;
+  }
+  
+  .star-link-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #fff;
+    color: #2c2c2c;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s;
+  }
+  
+  .star-link-btn:hover {
+    background: #e0e0e0;
+  }
+
+
+/* イベント */
+.pickup-event-section {
+    background-size: cover;
+    background-color: #f9f6f0;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 8% 4% 8%;
+
+  }
+
+  .pickup_p p{
+    font-size: 16px;
+  }
+  
+  .pickup-event-inner {
+    
+    max-width: 1200px;
+    margin: 0% 8% 4% 8% ;
+    letter-spacing: 10%;
+    margin: 0 auto;
+    text-align: center;
+
+  }
+
+  
+  .pickup-event-inner h2 {
+    text-align: center;
+    margin-bottom: 2%;
+    letter-spacing:0.05rem;
+  }
+
+  .h2_border {
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+    text-align: center;
+  }
+
+  .h2_border:before, .h2_border:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 45px;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .h2_border:before {
+    left:0;
+  }
+  .h2_border:after {
+    right: 0;
+  }
+ 
+
+  .pickup-event-inner h4 {
+    margin: 3% 5% 5% 5%;
+    font-family: "Zen Kaku Gothic New";
+    font-weight: 500;
+    letter-spacing:0.05rem;
+
+  }
+
+  .pickup-event-inner h5 {
+    font-family: "Zen Kaku Gothic New";
+    font-weight: 100;
+    letter-spacing:0.05rem;
+  }
+
+  .pickup-event-inner span {
+    font-family: "Zen Kaku Gothic New";
+    font-size: 14px;
+    margin: 0% 5%;
+  }
+
+  .pickup-container {
+    display: flex;
+    /* justify-content: center; */
+    gap: 2rem;
+    padding-bottom: 1rem;
+    scroll-padding: 1rem;
+    justify-content: center;
+    margin: 24px;
+  }
+  .btn_star{
+    text-decoration: none;
+    width: 220px;
+    padding: 10px 2rem;
+    font-weight: bold;
+    color: hsl(195, 78%, 23%);
+    border: solid hsl(195, 78%, 23%);
+    background-color: #ddecf5;
+    border-radius: 100vh;
+    transition: 0.5s;
+    margin: 24px auto 0 auto;
+    display: block;
+    text-align: center;
+  }
+  .btn_star:hover{
+    color: #F5F6F6;
+    background: #27acd9;
+  }
+  a .btn_star{
+    font-weight: 100;
+  }
+
+  
+
+
+  
+
+  
+  /* イベントカード */
+    /* カード設定 */
+    .event-card {
+      /* flex: 0 0 320px; 1枚ずつ見せたいサイズ */
+      background: #F5F6F6;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      scroll-snap-align: start;
+      transition: transform 0.3s;
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      
+    }
+    
+    .event-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .event-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px 10px 0px 0px;
+      /* margin-bottom: 1rem; */
+    }
+
+
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .event-card img {
+    width: 100%;
+    /* height: 200px; */
+    object-fit: cover;
+    /* border-radius: 10px; */
+    /* margin-bottom: 1rem; */
+  }
+  
+  .event-card h5 {
+    /* font-size: 1.4rem; */
+    margin-bottom: 0.8rem;
+    /* color: #2c2c2c; */
+  }
+  
+  .btn_event{
+    text-decoration: none;
+    width: 240px;
+    padding: 10px 2rem;
+    font-weight: bold;
+    color: hsl(195, 78%, 23%);
+    border: solid hsl(195, 78%, 23%);
+    background-color: #ddecf5;
+    border-radius: 100vh;
+    transition: 0.5s;
+    margin: 24px auto 0 auto;
+    display: block;
+    text-align: center;
+  }
+  .btn_event:hover{
+    color: #F5F6F6;
+    background: #27acd9;
+  }
+  a .btn_event{
+    font-weight: 100;
+  }
+
+
+  
+
+/* 観光コース */
+.tour-courses {
+    background-color: #212121;
+    color: #ECEDED;
+    padding: 8% 0 0 0;
+    min-height: 100%;
+    position: relative;
+  }
+
+  .tour-courses h2{
+    margin-bottom: 2%;
+  }
+
+  .tour_txt h2 {
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+    text-align: center;
+  }
+
+  .tour_txt h2:before, .tour_txt h2:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 45px;
+    height: 1px;
+    background-color: #ECEDED;
+  }
+  
+ .tour_txt h2:before {
+    left:0;
+  }
+  .tour_txt h2:after {
+    right: 0;
+  }
+
+  
+
+  .tour_txt{
+    margin: 0% 16% 4% 16%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+
+  .tour-courses p{
+    font-family:"Zen Kaku Gothic New" ;
+  }
+.course-inner{
+  
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height:100%;
+
+}
+
+.course_content_natural{
+  background-image: url(../img/img_course_natural.jpg);
+  position: relative;
+  display: flex;
+  background-size: cover;           /* 画像を要素サイズに合わせfる */
+  background-position: center;  
+  bottom: 0;
+  z-index: 1; 
+  /* padding: 8% 16%; */
+  height: 50vh;
+  
+}
+
+.course-inner h3{
+  margin-bottom: 4%;
+}
+
+
+.course_content_strolling{
+  background-image: url(../img/img_course_strolling.jpg);
+  position: relative;
+  display: flex;
+  background-size: cover;          
+  background-position: center;  
+  z-index: 0;
+  margin: 0;
+  height: 50vh;
+}
+
+
+.course_content_txt{
+  margin: 8% 16%;
+  text-align: left;
+  color: #ECEDED;
+  z-index: 2;
+  letter-spacing: 0.05em;
+
+}
+
+
+.course_content_txt p{
+  font-family:"Zen Kaku Gothic New" ;
+}
+
+
+.course_content_natural::before,
+.course_content_strolling::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 1;
+}
+
+.btn_course_natural, .btn_course_strolling{
+  /* font-family:"Zen Kaku Gothic New" ; */
+  display: block;
+	text-align: center;
+  justify-content: center;
+	/* vertical-align: middle; */
+	text-decoration: none;
+	width: 200px;
+	padding: 10px 2rem;
+	font-weight: bold;
+	color: #0d5268;
+  background-color: #ddecf5;
+	border-radius: 100vh;
+	transition: 0.5s;
+  margin: 24px 0 0 0;
+}
+
+.btn_course_natural:hover,.btn_course_strolling:hover{
+  color: #ECEDED;
+	background: #27acd9;
+}
+
+
+/* 波 */
+
+
+
+/* 体験スポット */
+.experience-section {
+  padding: 8%;
+  background-color: #f9f6f0;
+  /* background: url(../img/background.JPG); */
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.experience-section h2 {
+  margin-bottom: 2%; 
+}
+.experience-section p {
+  margin-bottom: 8%; 
+}
+
+.experience-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content:center;
+}
+.exp-card {
+  width: 300px;
+  height: 400px;
+  /* background: #F5F6F6; */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.exp-card img {
+   width: 100%;
+   height: 100%;
+  object-fit: cover;
+ }
+.exp-card p { padding: 0 1rem 1rem; }
+
+/* --- 既存 .exp-card を少し強化 --- */
+.exp-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* ホバーアクション */
+.exp-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* --- テキストを画像上に重ねる --- */
+.exp-card h4 {
+  font-family: "Zen Kaku Gothic New";
+  font-weight: 100;
+  letter-spacing: 0.05em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0.8rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ECEDED;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+/* 矢印をh3内に表示 */
+.exp-card h3::after {
+  content: "→";
+  font-size: 1.2rem;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+
+/* ホバー時の矢印アニメーション */
+.exp-card:hover h3::after {
+  transform: translateX(5px);
+}
+
+
+.btn_ex_cards{
+  display: inline-block;
+	text-align: center;
+  justify-content: center;
+	text-decoration: none;
+	width: 240px;
+	padding: 10px 2rem;
+	font-weight: bold;
+	color: #0d5268;
+  border: solid hsl(195, 78%, 23%);
+  background-color: #ddecf5;
+	border-radius: 100vh;
+	transition: 0.5s;
+  margin: 24px auto 0 auto;
+  display: block;
+  text-align: center;
+}
+.btn_ex_cards:hover{
+  color: #ECEDED;
+	background: #27acd9;
+}
+
+
+
+/* 1100px以下 */
+@media screen and (max-width: 1100px) {
+
+  .event-card{
+    /* width: 230px; */
+  }
+  .event-card h4{
+    font-size: 14px;
+  }
+  .experience-cards{
+    gap: ;
+  }
+  .exp-card {
+    width: 210px;
+    height: 300px;
+
+   font-size: small;
+  }
+
+}
+
+/* 768px以下 */
+@media screen and (max-width: 768px) {
+
+  .event-card{
+    /* width: 230px; */
+    gap: 8%;
+  }
+
+  .exp-card {
+    width: 350px;
+    height: 300px;
+
+   font-size: small;
+  }
+
+  .exp-card {
+    width: 100%;
+    height: 250px;
+  }
+  .exp-card h3 {
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+
+
+/* お知らせ*/
+.news-section {
+  padding: 3rem 2rem;
+  background-color: #FBFBFB;
+  text-align: center;
+
+}
+
+.news-section a{
+  text-decoration: none;
+  color: #09213d;
+}
+
+.news-section h2 {
+   font-size: 2rem;
+    margin-bottom: 1.5rem; 
+  }
+
+.news-list { 
+  list-style: none;
+   max-width: 600px;
+    margin: 0 auto;
+     text-align: left;
+     }
+
+.news-list li {
+   margin-bottom: 1rem;
+    border-left: 3px solid #2c5f5d;
+     padding-left: 1rem; 
+    }
+
+.news-list span {
+   font-weight: bold;
+    color: #4F7471;
+     margin-right: 0.5rem;
+     }
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #09213d;
+  color: #ECEDED; font-size: 0.9rem;
+}
+
+
+/* ボタンリセット */
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+}
