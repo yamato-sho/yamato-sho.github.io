@@ -1,0 +1,1 @@
+# yamato-sho.github.io
