@@ -449,7 +449,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0% 8% 4% 8%;
-
   }
 
   .pickup_p p{
@@ -624,6 +623,11 @@ body {
     font-weight: 100;
   }
 
+  @media (max-width: 768px) {
+.btn_event {
+	border:none;
+  }
+  }
 
   
 
@@ -933,6 +937,8 @@ body {
     font-size: 1rem;
     padding: 0.6rem 0.8rem;
   }
+  .btn_ex_cards {
+border:none;
 }
 
 
